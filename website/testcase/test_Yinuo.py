@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-#@Pjname ：GuiAutomation
-#@Time   : 2020/06/09/21:37
-#@Author : Yuye
-#@File   : test_Yinuo.py
+# @Pjname ：GuiAutomation
+# @Time   : 2020/06/09/21:37
+# @Author : Yuye
+# @File   : test_Yinuo.py
 
 import json
 import pytest
@@ -15,9 +15,9 @@ class TestYinuo(object):
     def setup_method(self):
         # self.driver = webdriver.Firefox()
 
-        options = webdriver.ChromeOptions()
+        # options = webdriver.ChromeOptions()
         # self.driver = webdriver.Chrome(options=options)
-        self.driver = webdriver.Remote(command_executor="127.0.0.1:4444/wd/hub",desired_capabilities=DesiredCapabilities.FIREFOX, proxy=None)
+        self.driver = webdriver.Remote(command_executor="127.0.0.1:4444/wd/hub", desired_capabilities=DesiredCapabilities.CHROME, proxy=None)
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
         self.driver.get("http://test-web.xinkangzaixian.cn")
